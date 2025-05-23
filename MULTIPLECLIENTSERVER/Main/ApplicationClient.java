@@ -5,7 +5,7 @@ import java.net.Socket;
 
 public class ApplicationClient {
     public static void main(String[] args) {
-        try (Socket socket = new Socket("localhost", 12345);
+        try (Socket socket = new Socket("localhost", 1234);
              BufferedReader userInput = new BufferedReader(new InputStreamReader(System.in));
              BufferedReader in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
              PrintWriter out = new PrintWriter(socket.getOutputStream(), true)) {
